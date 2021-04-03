@@ -33,7 +33,7 @@ func confirmReceivedLogToRsyslog() {
 }
 
 func main() {
-	go handleSignals()
+	// go handleSignals()
 
 	in := bufio.NewReader(os.Stdin)
 
@@ -46,6 +46,7 @@ func main() {
 		if log_line == "" || err == io.EOF {
 			break
 		}
+
 	}
 	os.Exit(0)
 }

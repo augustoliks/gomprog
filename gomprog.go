@@ -1,12 +1,9 @@
 package gomprog
 
 import (
-	"bufio"
 	"fmt"
-	"io"
 	"os"
 	"os/signal"
-	"strings"
 	"syscall"
 )
 
@@ -32,21 +29,21 @@ func confirmReceivedLogToRsyslog() {
 	fmt.Println("OK")
 }
 
-func main() {
-	// go handleSignals()
+// func main() {
+// 	// go handleSignals()
 
-	in := bufio.NewReader(os.Stdin)
+// 	in := bufio.NewReader(os.Stdin)
 
-	for {
-		log_line, err := in.ReadString('\n')
-		log_line = strings.TrimSuffix(log_line, "\n")
+// 	for {
+// 		log_line, err := in.ReadString('\n')
+// 		log_line = strings.TrimSuffix(log_line, "\n")
 
-		confirmReceivedLogToRsyslog()
+// 		confirmReceivedLogToRsyslog()
 
-		if log_line == "" || err == io.EOF {
-			break
-		}
+// 		if log_line == "" || err == io.EOF {
+// 			break
+// 		}
 
-	}
-	os.Exit(0)
-}
+// 	}
+// 	os.Exit(0)
+// }

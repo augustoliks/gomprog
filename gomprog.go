@@ -25,7 +25,7 @@ func handleSignals() {
 	}
 }
 
-func confirmReceivedLogToRsyslog() {
+func ConfirmReceivedLogToRsyslog() {
 	fmt.Println("OK")
 }
 

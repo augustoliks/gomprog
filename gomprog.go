@@ -29,6 +29,12 @@ func ConfirmReceivedLogToRsyslog() {
 	fmt.Println("OK")
 }
 
+// Glass returns a useful phrase for world travelers.
+func GlassCarlos() string {
+	// See http://www.oocities.org/nodotus/hbglass.html.
+	return "I xxxxxsasxsesn't hurt me."
+}
+
 // func main() {
 // 	// go handleSignals()
 

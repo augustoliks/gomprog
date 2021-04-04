@@ -1,3 +1,3 @@
-module github.com/augustoliks/go-redis-rsyslog/gomprog
+module github.com/augustoliks/go-redis-rsyslog
 
 go 1.15

@@ -1,24 +1,15 @@
 package outgoing
 
 import (
-	"fmt"
+	"github.com/augustoliks/gomprog/internal/service"
 )
 
 type Redis struct {
-	host     string
-	port     int
-	user     string
-	password string
+	URL      string `json:"url"`
+	User     string `json:"user"`
+	Password string `json:"password"`
 }
 
-func (redis Redis) OnInit() {
-	fmt.Println("ok")
-}
+func (redis Redis) OnInit() {}
 
-func (redis Redis) OnProcessed() {
-	fmt.Println("ok")
-}
-
-func (redis Redis) OnSend() {
-	fmt.Println("ok")
-}
+func (redis Redis) OnSend(log service.GELFLogFormat) {}

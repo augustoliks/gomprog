@@ -1,6 +1,9 @@
 package service
 
-import "io"
+import (
+	"encoding/json"
+	"io"
+)
 
 type Incoming interface {
 	ConfirmReceivedLogToRsyslog()
@@ -10,8 +13,21 @@ type Incoming interface {
 
 type Outgoing interface {
 	OnInit()
-	OnProcessed(string) string
-	OnSend(string)
+	OnSend(GELFLogFormat)
+}
+
+type GELFLogFormat struct {
+	Host         string `json:"host"`
+	ShortMessage string `json:"short_message"`
+	Timestamp    string `json:"timestamp"`
+	Group        string `json:"_group"`
+	AppName      string `json:"_app_name"`
+}
+
+func convertedLog(logRaw string) GELFLogFormat {
+	var gelfLog GELFLogFormat
+	json.Unmarshal([]byte(logRaw), &gelfLog)
+	return gelfLog
 }
 
 func Run(rsyslog Incoming, plugin Outgoing) {
@@ -23,9 +39,8 @@ func Run(rsyslog Incoming, plugin Outgoing) {
 		if logLine == "" || err == io.EOF {
 			break
 		}
-		logProcessed := plugin.OnProcessed(logLine)
-		plugin.OnSend(logProcessed)
+		gelfLog := convertedLog(logLine)
+		plugin.OnSend(gelfLog)
 		rsyslog.ConfirmReceivedLogToRsyslog()
 	}
-
 }

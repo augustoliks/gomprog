@@ -1,22 +1,15 @@
 package outgoing
 
-import "fmt"
+import (
+	"github.com/augustoliks/gomprog/internal/service"
+)
 
 type Graylog struct {
-	host     string
-	port     int
-	user     string
-	password string
+	URL      string `json:"url"`
+	User     string `json:"user"`
+	Password string `json:"password"`
 }
 
-func (g Graylog) OnInit() {
-	fmt.Println("ok")
-}
+func (graylog Graylog) OnInit() {}
 
-func (g Graylog) OnProcessed() {
-	fmt.Println("ok")
-}
-
-func (g Graylog) OnSend() {
-	fmt.Println("ok")
-}
+func (graylog Graylog) OnSend(log service.GELFLogFormat) {}

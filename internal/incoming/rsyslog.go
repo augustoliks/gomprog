@@ -11,7 +11,9 @@ import (
 
 var in = bufio.NewReader(os.Stdin)
 
-func HandleSignals() {
+type Rsyslog struct{}
+
+func (rsyslog Rsyslog) HandleSignals() {
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, syscall.SIGUSR1, syscall.SIGTERM, syscall.SIGKILL, os.Interrupt)
 
@@ -23,7 +25,7 @@ func HandleSignals() {
 	}
 }
 
-func ReceivedLog() (string, error) {
+func (rsyslog Rsyslog) ReceivedLog() (string, error) {
 	log_line, err := in.ReadString('\n')
 	log_line = strings.TrimSuffix(log_line, "\n")
 
@@ -34,6 +36,6 @@ func ReceivedLog() (string, error) {
 	return log_line, nil
 }
 
-func ConfirmReceivedLogToRsyslog() {
+func (rsyslog Rsyslog) ConfirmReceivedLogToRsyslog() {
 	fmt.Println("OK")
 }

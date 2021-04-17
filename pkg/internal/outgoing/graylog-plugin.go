@@ -1,7 +1,7 @@
 package outgoing
 
 import (
-	"github.com/augustoliks/gomprog/internal/service"
+	"github.com/augustoliks/pkg/gomprog/internal/service"
 )
 
 type Graylog struct {

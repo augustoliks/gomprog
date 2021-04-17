@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/augustoliks/gomprog/internal/service"
+	"github.com/augustoliks/pkg/gomprog/internal/service"
 
 	"github.com/go-redis/redis/v8"
 )
@@ -28,13 +28,12 @@ func (redisPlugin RedisPlugin) OnInit() {
 	err := redisClient.Ping(context.Background()).Err()
 
 	if err != nil {
-		time.Sleep(3 * time.Second)
+		time.Sleep(5 * time.Second)
 		err := redisClient.Ping(context.Background()).Err()
 		if err != nil {
 			panic(err)
 		}
 	}
-
 }
 
 func (redisPlugin RedisPlugin) OnSend(log service.GELFLogFormat) {
@@ -49,5 +48,4 @@ func (redisPlugin RedisPlugin) OnSend(log service.GELFLogFormat) {
 	if err != nil {
 		panic(err)
 	}
-
 }

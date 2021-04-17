@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/augustoliks/gomprog/internal/incoming"
-	"github.com/augustoliks/gomprog/internal/outgoing"
-	"github.com/augustoliks/gomprog/internal/service"
+	"github.com/augustoliks/pkg/gomprog/internal/incoming"
+	"github.com/augustoliks/pkg/gomprog/internal/outgoing"
+	"github.com/augustoliks/pkg/gomprog/internal/service"
 )
 
 func main() {

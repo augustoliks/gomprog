@@ -5,9 +5,9 @@ import (
 )
 
 type Graylog struct {
-	URL      string `json:"url"`
-	User     string `json:"user"`
-	Password string `json:"password"`
+	URL      string
+	User     string
+	Password string
 }
 
 func (graylog Graylog) OnInit() {}

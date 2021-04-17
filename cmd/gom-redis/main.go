@@ -9,25 +9,18 @@ import (
 	"github.com/augustoliks/gomprog/internal/service"
 )
 
-func ui(url *string, user *string, password *string) {
-	flag.StringVar(url, "n", "127.0.0.1", "Redis URL")
-	flag.StringVar(user, "u", "admin", "Redis Username")
-	flag.StringVar(password, "p", "admin", "Redis Password")
-	flag.Parse()
-}
-
 func main() {
-	var url string
-	var user string
-	var password string
+	var (
+		url      = flag.String("n", "127.0.0.1:6379", "Redis URL")
+		password = flag.String("p", "", "Redis Password")
+	)
 
-	ui(&url, &user, &password)
+	flag.Parse()
 
 	rsyslog := incoming.Rsyslog{}
-	redis := outgoing.Redis{
-		URL:      url,
-		User:     user,
-		Password: password,
+	redis := outgoing.RedisPlugin{
+		URL:      *url,
+		Password: *password,
 	}
 	service.Run(rsyslog, redis)
 }

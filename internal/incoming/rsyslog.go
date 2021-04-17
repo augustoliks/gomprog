@@ -34,6 +34,7 @@ func (rsyslog Rsyslog) ReceivedLog() (string, error) {
 	}
 
 	return log_line, nil
+	// return `{"host":"carlos","short_message":"neto","timestamp": 123456,"_group": "123","_app_name":"123"}`, nil
 }
 
 func (rsyslog Rsyslog) ConfirmReceivedLogToRsyslog() {

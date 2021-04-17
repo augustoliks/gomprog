@@ -19,7 +19,7 @@ type Outgoing interface {
 type GELFLogFormat struct {
 	Host         string `json:"host"`
 	ShortMessage string `json:"short_message"`
-	Timestamp    string `json:"timestamp"`
+	Timestamp    int    `json:"timestamp"`
 	Group        string `json:"_group"`
 	AppName      string `json:"_app_name"`
 }

@@ -1,6 +1,10 @@
 .. image:: https://github.com/augustoliks/gomprog/actions/workflows/go.yml/badge.svg?branch=main
     :target: https://github.com/augustoliks/gomprog/actions/workflows/go.yml
 
+
+.. image:: https://codecov.io/gh/augustoliks/gomprog/branch/master/graph/badge.svg?token=aagkZMUNew
+    :target: https://codecov.io/gh/augustoliks/gomprog
+
 gomprog
 =======
 

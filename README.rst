@@ -4,6 +4,9 @@
 .. image:: https://codecov.io/gh/augustoliks/gomprog/branch/main/graph/badge.svg?token=aagkZMUNew
     :target: https://codecov.io/gh/augustoliks/gomprog
 
+.. image:: https://goreportcard.com/badge/github.com/augustoliks/gomprog
+    :target: https://goreportcard.com/report/github.com/augustoliks/gomprog
+    :alt: Go Report Card
 
 gomprog
 =======

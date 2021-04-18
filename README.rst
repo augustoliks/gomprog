@@ -124,7 +124,7 @@ Access Redis container, subscribe ``_app_name`` channel
 
 Output expected
 
-.. image:: example.jpg
+.. image:: ./docs/image/example.jpg
    :target: ./docs/image/example.jpg
 
 References

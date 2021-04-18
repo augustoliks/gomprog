@@ -13,21 +13,21 @@ writted in Golang.
 Dependencies
 ------------
 
-  Dependencies   Version
-  -------------- ------------
-  rsyslog        8.2010.0-1
+Dependencies  | Version
+---           |---
+rsyslog       | 8.2010.0-1
 
 How install
 -----------
 
-``` {.sourceCode .shell}
+```shell
 go get github.com/augustoliks/gomprog
 ```
 
 Rsyslog Config
 --------------
 
-``` {.sourceCode .shell}
+```shell
 # Incoming log from udp syslog
 module(
   load="imudp"
@@ -81,34 +81,34 @@ Tests
 
 Download project
 
-``` {.sourceCode .shell}
+```shell
 git clone https://github.com/augustoliks/gomprog
 cd gomprog/
 ```
 
 Provisioning redis instance
 
-``` {.sourceCode .shell}
+```shell
 cd tests/
 docker-compose up -d 
 ```
 
 Configure Rsyslog
 
-``` {.sourceCode .shell}
+```shell
 cp packaging/rsyslog.d/30-gomprog-redis.conf /etc/rsyslog.d/30-gomprog-redis.conf
 systemctl restart rsyslog 
 ```
 
 Log to upd using `logger` cli command
 
-``` {.sourceCode .shell}
+```shell
 logger -d -n 127.0.0.1 -p 10514 "tests"
 ```
 
 Access Redis container, subscribe `_app_name` channel
 
-``` {.sourceCode .shell}
+```shell
 docker exec --user root -it redis bash                                                                                                           
 
 root@e7d850092677:/data# redis-cli 
@@ -123,7 +123,7 @@ Reading messages... (press Ctrl-C to quit)
 3) "{\"host\":\"localhost\",\"short_message\":\"tests\",\"timestamp\":1618719119,\"_group\":\"servers\",\"_app_name\":\"augustoliks\"}"
 ```
 
-> **note**
+> **note:**
 >
 > **augustoliks** should be replace with Your Linux Username
 
@@ -134,6 +134,6 @@ Output expected
 References
 ----------
 
--   <https://petersouter.xyz/testing-and-mocking-stdin-in-golang/>
--   <https://github.com/golang-standards/project-layout>
+- https://petersouter.xyz/testing-and-mocking-stdin-in-golang/
+- https://github.com/golang-standards/project-layout
 

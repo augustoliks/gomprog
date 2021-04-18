@@ -3,6 +3,22 @@ gomprog
 
 Rsyslog omprog plugin, created to forward logs to Redis instance. Plugin writted in Golang.
 
+Dependencies
+------------
+
+============  ===============
+Dependencies  Version
+============  ===============
+rsyslog       8.2010.0-1
+============  ===============
+
+How install
+-----------
+
+.. code-block:: shell
+
+  go get github.com/augustoliks/gomprog
+
 Rsyslog Config
 --------------
 
@@ -54,3 +70,65 @@ Rsyslog Config
     )
 
   }
+
+Tests
+-----
+
+Download project
+
+.. code-block:: shell
+
+  git clone https://github.com/augustoliks/gomprog
+  cd gomprog/
+  
+Provisioning redis instance
+
+.. code-block:: shell
+
+  cd tests/
+  docker-compose up -d 
+
+Configure Rsyslog
+
+.. code-block:: shell
+
+  cp configs/rsyslog.d/30-gomprog-redis.conf /etc/rsyslog.d/30-gomprog-redis.conf
+  systemctl restart rsyslog 
+
+Log to upd using ``logger`` cli command
+
+.. code-block:: shell
+
+  logger -d -n 127.0.0.1 -p 10514 "tests"
+
+Access Redis container, subscribe ``_app_name`` channel
+
+.. code-block:: shell
+
+  docker exec --user root -it redis bash                                                                                                           
+
+  root@e7d850092677:/data# redis-cli 
+
+  127.0.0.1:6379> SUBSCRIBE augustoliks
+  Reading messages... (press Ctrl-C to quit)
+  1) "subscribe"
+  2) "augustoliks"
+  3) (integer) 1
+  1) "message"
+  2) "augustoliks"
+  3) "{\"host\":\"localhost\",\"short_message\":\"tests\",\"timestamp\":1618719119,\"_group\":\"servers\",\"_app_name\":\"augustoliks\"}"
+
+.. note::
+
+  **augustoliks** should be replace with Your Linux Username
+
+Output expected
+
+.. image:: example.jpg
+   :target: docs/image/example.jpg
+
+References
+----------
+
+- https://petersouter.xyz/testing-and-mocking-stdin-in-golang/
+- https://github.com/golang-standards/project-layout

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/augustoliks/pkg/gomprog/internal/service"
+	"github.com/augustoliks/gomprog/pkg/service"
 
 	"github.com/go-redis/redis/v8"
 )
@@ -19,7 +19,7 @@ type RedisPlugin struct {
 	Password string
 }
 
-func (redisPlugin RedisPlugin) OnInit() {
+func (redisPlugin RedisPlugin) OnInit() error {
 	redisClient = redis.NewClient(&redis.Options{
 		Addr:     redisPlugin.URL,
 		Password: redisPlugin.Password,
@@ -29,23 +29,14 @@ func (redisPlugin RedisPlugin) OnInit() {
 
 	if err != nil {
 		time.Sleep(5 * time.Second)
-		err := redisClient.Ping(context.Background()).Err()
-		if err != nil {
-			panic(err)
-		}
+		err = redisClient.Ping(context.Background()).Err()
 	}
+
+	return err
 }
 
-func (redisPlugin RedisPlugin) OnSend(log service.GELFLogFormat) {
+func (redisPlugin RedisPlugin) OnSend(log service.GELFLogFormat) error {
 	jsonLog, err := json.Marshal(log)
-
-	if err != nil {
-		panic(err)
-	}
-
 	err = redisClient.Publish(ctx, log.AppName, string(jsonLog)).Err()
-
-	if err != nil {
-		panic(err)
-	}
+	return err
 }

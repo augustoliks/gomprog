@@ -12,6 +12,9 @@
     :target: https://pkg.go.dev/github.com/augustoliks/gomprog
     :alt: Go Reference
 
+.. image:: https://app.codacy.com/project/badge/Grade/13793d37e1ff455bbeb342639e2c86d1
+    :target: https://www.codacy.com/gh/augustoliks/gomprog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=augustoliks/gomprog&amp;utm_campaign=Badge_Grade
+
 gomprog
 =======
 

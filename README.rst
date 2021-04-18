@@ -8,6 +8,10 @@
     :target: https://goreportcard.com/report/github.com/augustoliks/gomprog
     :alt: Go Report Card
 
+.. image:: https://pkg.go.dev/badge/github.com/augustoliks/gomprog.svg
+    :target: https://pkg.go.dev/github.com/augustoliks/gomprog
+    :alt: Go Reference
+
 gomprog
 =======
 

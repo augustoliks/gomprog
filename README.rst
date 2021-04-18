@@ -92,7 +92,7 @@ Configure Rsyslog
 
 .. code-block:: shell
 
-  cp configs/rsyslog.d/30-gomprog-redis.conf /etc/rsyslog.d/30-gomprog-redis.conf
+  cp packaging/rsyslog.d/30-gomprog-redis.conf /etc/rsyslog.d/30-gomprog-redis.conf
   systemctl restart rsyslog 
 
 Log to upd using ``logger`` cli command

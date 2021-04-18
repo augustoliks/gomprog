@@ -1,15 +1,15 @@
 package config
 
 import (
-	"github.com/sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 func SetupLog(logLevel string) {
-	var logrusLogLevel logrus.Level
+	var logrusLogLevel log.Level
 	var err error
-	logrusLogLevel, err = logrus.ParseLevel(logLevel)
+	logrusLogLevel, err = log.ParseLevel(logLevel)
 	if err != nil {
-		logrusLogLevel = logrus.ErrorLevel
+		logrusLogLevel = log.ErrorLevel
 	}
-	logrus.SetLevel(logrusLogLevel)
+	log.SetLevel(logrusLogLevel)
 }

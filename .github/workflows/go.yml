@@ -30,4 +30,4 @@ jobs:
         file: ./coverage.out
 
     - name: Build
-      run: go build -v .
+      run: go build cmd/gomprog_redis/main.go

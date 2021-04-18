@@ -1,12 +1,12 @@
-![image](https://github.com/augustoliks/gomprog/actions/workflows/go.yml/badge.svg?branch=main%0A%20:target:%20https://github.com/augustoliks/gomprog/actions/workflows/go.yml)
+[![image](https://github.com/augustoliks/gomprog/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/augustoliks/gomprog/actions/workflows/go.yml)
 
-![image](https://codecov.io/gh/augustoliks/gomprog/branch/main/graph/badge.svg?token=aagkZMUNew%0A%20:target:%20https://codecov.io/gh/augustoliks/gomprog)
+[![image](https://codecov.io/gh/augustoliks/gomprog/branch/main/graph/badge.svg?token=aagkZMUNew)](https://codecov.io/gh/augustoliks/gomprog)
 
-![image](https://goreportcard.com/badge/github.com/augustoliks/gomprog%0A%20:target:%20https://goreportcard.com/report/github.com/augustoliks/gomprog%0A%20:alt:%20Go%20Report%20Card)
+[![image](https://goreportcard.com/badge/github.com/augustoliks/gomprog)](https://goreportcard.com/report/github.com/augustoliks/gomprog)
 
-![image](https://pkg.go.dev/badge/github.com/augustoliks/gomprog.svg%0A%20:target:%20https://pkg.go.dev/github.com/augustoliks/gomprog%0A%20:alt:%20Go%20Reference)
+[![image](https://pkg.go.dev/badge/github.com/augustoliks/gomprog.svg)](https://pkg.go.dev/github.com/augustoliks/gomprog)
 
-![image](https://app.codacy.com/project/badge/Grade/13793d37e1ff455bbeb342639e2c86d1%0A%20:target:%20https://www.codacy.com/gh/augustoliks/gomprog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=augustoliks/gomprog&amp;utm_campaign=Badge_Grade)
+[![image](https://app.codacy.com/project/badge/Grade/13793d37e1ff455bbeb342639e2c86d1)](https://www.codacy.com/gh/augustoliks/gomprog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=augustoliks/gomprog&amp;utm_campaign=Badge_Grade)
 
 gomprog
 =======

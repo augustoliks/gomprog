@@ -1,7 +1,7 @@
 [![image](https://pkg.go.dev/badge/github.com/augustoliks/gomprog.svg)](https://pkg.go.dev/github.com/augustoliks/gomprog)
 [![image](https://goreportcard.com/badge/github.com/augustoliks/gomprog)](https://goreportcard.com/report/github.com/augustoliks/gomprog)
-[![Tests](https://github.com/augustoliks/gomprog/actions/workflows/test.yml/badge.svg)](https://github.com/augustoliks/gomprog/actions/workflows/test.yml)
 [![image](https://app.codacy.com/project/badge/Grade/13793d37e1ff455bbeb342639e2c86d1)](https://www.codacy.com/gh/augustoliks/gomprog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=augustoliks/gomprog&amp;utm_campaign=Badge_Grade)
+[![Tests](https://github.com/augustoliks/gomprog/actions/workflows/test.yml/badge.svg)](https://github.com/augustoliks/gomprog/actions/workflows/test.yml)
 [![Release](https://github.com/augustoliks/gomprog/actions/workflows/releaser.yml/badge.svg)](https://github.com/augustoliks/gomprog/actions/workflows/releaser.yml)
 
 <!-- [![image](https://codecov.io/gh/augustoliks/gomprog/branch/main/graph/badge.svg?token=aagkZMUNew)](https://codecov.io/gh/augustoliks/gomprog) -->

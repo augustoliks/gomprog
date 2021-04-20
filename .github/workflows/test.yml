@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  build:
+  unit-testing:
     name: Unit Testing
     runs-on: ubuntu-latest
     steps:
@@ -18,17 +18,11 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
 
-    # - name: Check out code into the Go module directory
-    #   uses: actions/checkout@v1
-
-    # - name: Get dependencies
-    #   run: go mod download
-
     - name: Test
       run: go test -v ./...
 
-  coverage:
-    name: Tests coverage
+  tests-coverage:
+    name: Tests Coverage
     runs-on: ubuntu-latest
     steps:
 
@@ -37,6 +31,9 @@ jobs:
       with:
         go-version: 1.15
       id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v1
 
     - name: Test
       run: go test -v -coverprofile=coverage.out ./...

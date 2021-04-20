@@ -22,8 +22,14 @@ rsyslog       | 8.2010.0-1
 How install
 -----------
 
+All binaries cli is avaible in: https://github.com/augustoliks/gomprog/releases/
+
 ```shell
-go get github.com/augustoliks/gomprog
+mkdir gomprog-redis
+cd gomprog-redis/
+wget https://github.com/augustoliks/gomprog/releases/download/0.1.5/gomprog_0.1.5_linux_64-bit.zip
+unzip gomprog_0.1.5_linux_64-bit.zip 
+cp gomprog-redis /bin/
 ```
 
 Rsyslog Config

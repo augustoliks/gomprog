@@ -1,7 +1,9 @@
 name: Tests
 
+
 on:
   push:
+
 
 jobs:
   unit-testing:
@@ -35,7 +37,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
 
-    - name: Test
+    - name: Unit Testing, with created coverage file
       run: go test -v -coverprofile=coverage.out ./...
 
     - name: Upload coverage to Codecov

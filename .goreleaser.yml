@@ -6,40 +6,29 @@ before:
     - go mod tidy
     # you may remove this if you don't need go generate
     - go generate ./...
-builds:
-  - id: gomprog-redis
-    main: ./cmd/gomprog_redis/main.go
-    binary: gomprog-redis
 
-  - env:
-      - CGO_ENABLED=0
+builds:
+  - main: ./cmd/gomprog_redis/main.go
+    id: "gomprog-redis"
+    binary: gomprog-redis
     goos:
       - linux
-      - windows
       - darwin
+
 archives:
   - replacements:
       darwin: Darwin
       linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
+
 checksum:
   name_template: 'checksums.txt'
+
 snapshot:
-  name_template: "{{ .Tag }}-next"
+  name_template: "{{ .Tag }}-SNAPSHOT-{{.ShortCommit}}"
+
 changelog:
   sort: asc
   filters:
     exclude:
       - '^docs:'
       - '^test:'
-release:
-  # If set to true, will not auto-publish the release.
-  # Default is false.
-  draft: true
-
-  # You can disable this pipe in order to not upload any artifacts.
-  # Defaults to false.
-  disable: true
-

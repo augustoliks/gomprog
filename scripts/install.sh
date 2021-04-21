@@ -9,7 +9,7 @@ PATH_DOC=/usr/share/doc/gomprog/
 
 PACKAGE=gomprog_$VERSION_linux_$(uname -i).zip
 PACKAGE_LINK=https://github.com/augustoliks/gomprog/releases/download/$VERSION/$PACKAGE
-PACKAGE_LINK=https://github.com/augustoliks/gomprog/releases/download/0.1.5/gomprog_0.1.5_linux_64-bit.zip
+
 TEMP_DIRECTORY=$(mktemp -d)
 
 echo "

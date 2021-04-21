@@ -22,7 +22,7 @@ archives:
       386: i686
     files:
       - README.md
-      - docs/*
+      # - docs/*
  
 checksum:
   name_template: 'checksums.txt'

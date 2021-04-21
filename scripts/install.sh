@@ -1,7 +1,7 @@
 #!/bin/bash
 
-VERSION="0.1.8"
-TAG_VERSION="v0.1.8"
+VERSION="0.1.7"
+TAG_VERSION="v0.1.7"
 
 PATH_BIN=/usr/local/bin/
 PATH_DOC=/usr/share/doc/gomprog/

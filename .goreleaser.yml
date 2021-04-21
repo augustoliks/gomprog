@@ -13,30 +13,26 @@ builds:
     binary: gomprog-redis
     goos:
       - linux
-      - darwin
 
 archives:
   - id: gomprog-redis
     format: zip
     replacements:
-      amd64: 64-bit
-      386: 32-bit
-      darwin: macOS
-      linux: linux
+      amd64: x86_64
+      386: i686
     files:
-      - LICENSE
       - README.md
       - docs/*
-
+ 
 checksum:
   name_template: 'checksums.txt'
 
 snapshot:
   name_template: "{{ .Tag }}-SNAPSHOT-{{.ShortCommit}}"
 
-changelog:
-  sort: asc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
+# changelog:
+#   sort: asc
+#   filters:
+#     exclude:
+#       - '^docs:'
+#       - '^test:'

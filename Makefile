@@ -1,2 +1,5 @@
-test-build:
-	 goreleaser --snapshot --skip-publish --rm-dist 
+build-test:
+	goreleaser --snapshot --skip-publish --rm-dist 
+
+test:
+	go test ./...

@@ -6,21 +6,18 @@
 
 <!-- [![image](https://codecov.io/gh/augustoliks/gomprog/branch/main/graph/badge.svg?token=aagkZMUNew)](https://codecov.io/gh/augustoliks/gomprog) -->
 
-gomprog
-=======
+# gomprog
 
 Rsyslog omprog plugin, created to forward logs to Redis instance. Plugin
 writted in Golang.
 
-Dependencies
-------------
+## Dependencies
 
 Dependencies  | Version
 ---           |---
 rsyslog       | 8.2010.0-1
 
-How install
------------
+## How install
 
 All binaries cli is avaible in: https://github.com/augustoliks/gomprog/releases/
 
@@ -32,8 +29,7 @@ unzip gomprog_0.1.5_linux_64-bit.zip
 cp gomprog-redis /bin/
 ```
 
-Rsyslog Config
---------------
+## Rsyslog Config
 
 ```shell
 # Incoming log from udp syslog
@@ -84,8 +80,7 @@ ruleset(name="gomprog"){
 }
 ```
 
-Tests
------
+## Tests
 
 Download project
 
@@ -139,9 +134,7 @@ Output expected
 
 [![image](./docs/image/example.jpg)](./docs/image/example.jpg)
 
-References
-----------
+## References
 
 - https://petersouter.xyz/testing-and-mocking-stdin-in-golang/
 - https://github.com/golang-standards/project-layout
-

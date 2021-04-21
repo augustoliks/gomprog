@@ -1,14 +1,14 @@
 #!/bin/bash
 
-VERSION="0.1.7"
-TAG_VERSION="v0.1.7"
+VERSION="0.1.8"
+TAG_VERSION="v0.1.8"
 
 PATH_BIN=/usr/local/bin/
 PATH_DOC=/usr/share/doc/gomprog/
 
-PACKAGE=gomprog_$VERSION_linux_$(uname -i).zip
+PACKAGE=gomprog_$(echo $VERSION)_linux_$(uname -i).zip
 PACKAGE_LINK=https://github.com/augustoliks/gomprog/releases/download/$TAG_VERSION/$PACKAGE
-# PACKAGE_LINK=https://github.com/augustoliks/gomprog/releases/download/v0.1.7/gomprog_0.1.7_linux_x86_64.zip
+
 TEMP_DIRECTORY=$(mktemp -d)
 
 echo "

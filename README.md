@@ -19,7 +19,7 @@ writted in Golang.
 curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/install.sh | sudo bash
 ```
 
-- Desinstall:
+- Uninstall:
 
 ```shell
 curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/desinstall.sh | sudo bash

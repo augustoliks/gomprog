@@ -41,3 +41,10 @@ echo "
 "
 mkdir -p $PATH_DOC
 cp $TEMP_DIRECTORY/README.md $PATH_DOC
+
+echo "
+* remove $TEMP_DIRECTORY
+
+    + rm -rf $TEMP_DIRECTORY
+"
+rm -rf $TEMP_DIRECTORY

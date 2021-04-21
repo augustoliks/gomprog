@@ -11,25 +11,23 @@
 Rsyslog omprog plugin, created to forward logs to Redis instance. Plugin
 writted in Golang.
 
-## Dependencies
-
-Dependencies  | Version
----           |---
-rsyslog       | 8.2010.0-1
-
 ## How install
 
-All binaries cli is avaible in: https://github.com/augustoliks/gomprog/releases/
+- Install:
 
 ```shell
-mkdir gomprog-redis
-cd gomprog-redis/
-wget https://github.com/augustoliks/gomprog/releases/download/0.1.5/gomprog_0.1.5_linux_64-bit.zip
-unzip gomprog_0.1.5_linux_64-bit.zip 
-cp gomprog-redis /bin/
+curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/install.sh | sudo bash
+```
+
+- Desinstall:
+
+```shell
+curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/desinstall.sh | sudo bash
 ```
 
 ## Rsyslog Config
+
+Configure file created for **rsyslog** in version **8.2010.0-1**
 
 ```shell
 # Incoming log from udp syslog

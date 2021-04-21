@@ -22,7 +22,7 @@ curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/install.
 - Uninstall:
 
 ```shell
-curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/desinstall.sh | sudo bash
+curl https://raw.githubusercontent.com/augustoliks/gomprog/main/scripts/ubsinstall.sh | sudo bash
 ```
 
 ## Rsyslog Config
